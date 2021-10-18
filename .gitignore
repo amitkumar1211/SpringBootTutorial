@@ -3,7 +3,9 @@
 *.project
 *.settings
 *target
+*bin
 /target/
+/bin/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
@@ -20,6 +22,7 @@
 *.iws
 *.iml
 *.ipr
+*.gradle
 
 ### NetBeans ###
 /nbproject/private/
