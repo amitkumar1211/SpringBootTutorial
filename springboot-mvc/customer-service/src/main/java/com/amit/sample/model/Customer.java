@@ -7,7 +7,21 @@ public class Customer {
     private String email;
     private Long id;
 
-    public String getName() {
+    
+    public Customer(Long id, String name, int age, String email) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.email = email;
+		this.id = id;
+	}
+    
+	public Customer() {
+		super();
+	}
+
+
+	public String getName() {
         return name;
     }
 

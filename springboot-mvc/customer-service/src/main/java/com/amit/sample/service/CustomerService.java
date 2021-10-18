@@ -11,6 +11,8 @@ import com.amit.sample.model.Customer;
 public class CustomerService {
 
 	List<Customer> customers = new ArrayList<>();
+	
+	
 
     public List<Customer> getCustomers() {
         
@@ -23,9 +25,24 @@ public class CustomerService {
         return customers;
     }
     
+    public Customer findCustomerById(int customerId) {
+    	customerId = customerId - 1;
+    	return customers.get(customerId);
+    }
+    
     public String addCustomer(Customer customer) {
     	customers.add(customer);
     	return "Successfully added a new Customer!";
+    }
+    
+    public Customer updateCustomerByName(String name, int customerId) {
+    	customerId = customerId - 1;
+    	Customer existingCust = customers.get(customerId);
+    	if(existingCust != null) {
+    		existingCust.setName(name);
+    		customers.add(customerId, existingCust);
+    	}
+    	return customers.get(customerId);
     }
     
     public Customer updateCustomer(Customer customer, int customerId) {
@@ -35,5 +52,21 @@ public class CustomerService {
     		customers.add(customerId, customer);
     	}
     	return customers.get(customerId);
+    }
+    
+    public String deleteCustomer(int customerId) {
+    	customerId = customerId - 1;
+    	customers.remove(customerId);
+    	return "Customer having id: "+ customerId+" removed successfully";
+    }
+    
+    public Customer getCustomerByName(String name) {
+    	Customer customerByName = new Customer();
+    	for(Customer customer: customers) {
+    		if(name.equalsIgnoreCase(customer.getName())) {
+    			customerByName = customer;
+    		}
+    	}
+    	return customerByName;
     }
 }
