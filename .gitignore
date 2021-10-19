@@ -23,7 +23,7 @@
 *.iml
 *.ipr
 *.gradle
-
+*.md
 ### NetBeans ###
 /nbproject/private/
 /build/
