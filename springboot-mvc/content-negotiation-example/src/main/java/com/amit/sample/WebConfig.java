@@ -12,11 +12,13 @@ public class WebConfig implements WebMvcConfigurer {
 
 	@Override
 	public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-		configurer.favorPathExtension(false).
+		configurer.
+			//for url parameter - query string
 			favorParameter(true).
 			parameterName("mediaType").
-			ignoreAcceptHeader(true)
-			.useJaf(false).
+		
+			//accept header -> mark as false
+			ignoreAcceptHeader(false).
 			defaultContentType(MediaType.APPLICATION_XML).
 			mediaType("xml", MediaType.APPLICATION_XML)
 			.mediaType("json", MediaType.APPLICATION_JSON);

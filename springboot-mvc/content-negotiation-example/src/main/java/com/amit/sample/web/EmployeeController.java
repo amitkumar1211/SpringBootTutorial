@@ -3,11 +3,9 @@ package com.amit.sample.web;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.amit.sample.model.Employee;
@@ -26,11 +24,17 @@ public class EmployeeController {
     }
 
    
-    @RequestMapping(value = "/employee/{Id}", produces = {"application/json", "application/xml" }, method = RequestMethod.GET)
-    public @ResponseBody Employee getEmployeeById(@PathVariable final Long Id) {
+    @GetMapping(value = "/employees/{Id}", produces = {"application/json", "application/xml" } )
+    public Employee getEmployeeById(@PathVariable final Long Id) {
         return employeeMap.get(Id);
     }
+    
+    @GetMapping(value = "/employees", produces = {"application/json", "application/xml" } )
+    public Map<Long, Employee> getEmployees() {
+        return employeeMap;
+    }
 
+    
  
     
 }
