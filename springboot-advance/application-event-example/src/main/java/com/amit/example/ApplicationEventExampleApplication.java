@@ -2,6 +2,7 @@ package com.amit.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class ApplicationEventExampleApplication {
@@ -10,11 +11,9 @@ public class ApplicationEventExampleApplication {
 		SpringApplication.run(ApplicationEventExampleApplication.class, args);
 	}
 	
-	/*
-	 * @Bean(initMethod="runAfterObjectCreated") public BeanInitMethodImpl
-	 * getFunnyBean() { System.out.println("Bean Init called."); return new
-	 * BeanInitMethodImpl(); }
-	 */
-
-
+	@Bean(initMethod="init")
+    public BeanInitMethodImpl beanInitMethodImpl() {
+		System.out.println("Bean Init called.");
+        return new BeanInitMethodImpl();
+    }
 }
