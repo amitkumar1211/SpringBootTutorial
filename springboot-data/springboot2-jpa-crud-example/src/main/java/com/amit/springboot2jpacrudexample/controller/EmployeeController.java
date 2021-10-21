@@ -20,17 +20,17 @@ import com.amit.springboot2jpacrudexample.model.Employee;
 import com.amit.springboot2jpacrudexample.repository.EmployeeRepository;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/employees")
 public class EmployeeController {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
-	@GetMapping("/employees")
+	@GetMapping
 	public List<Employee> getAllEmployees() {
 		return employeeRepository.findAll();
 	}
 
-	@GetMapping("/employees/{id}")
+	@GetMapping("{id}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable(value = "id") Long employeeId)
 			throws ResourceNotFoundException {
 		Employee employee = employeeRepository.findById(employeeId)
@@ -38,12 +38,12 @@ public class EmployeeController {
 		return ResponseEntity.ok().body(employee);
 	}
 
-	@PostMapping("/employees")
+	@PostMapping
 	public Employee createEmployee(@RequestBody Employee employee) {
 		return employeeRepository.save(employee);
 	}
 
-	@PutMapping("/employees/{id}")
+	@PutMapping("{id}")
 	public ResponseEntity<Employee> updateEmployee(@PathVariable(value = "id") Long employeeId,
 			@RequestBody Employee employeeDetails) throws ResourceNotFoundException {
 		Employee employee = employeeRepository.findById(employeeId)
@@ -56,7 +56,7 @@ public class EmployeeController {
 		return ResponseEntity.ok(updatedEmployee);
 	}
 
-	@DeleteMapping("/employees/{id}")
+	@DeleteMapping("/{id}")
 	public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Long employeeId)
 			throws ResourceNotFoundException {
 		Employee employee = employeeRepository.findById(employeeId)
