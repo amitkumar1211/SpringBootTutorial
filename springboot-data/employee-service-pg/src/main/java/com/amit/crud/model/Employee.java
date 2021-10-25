@@ -27,4 +27,6 @@ public class Employee {
 	@Column(name = "email_address", nullable = false)
 	private String emailId;
 	
+	@Column(name = "age", nullable = true )
+	private int age;
 }

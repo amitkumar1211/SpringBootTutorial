@@ -1,9 +1,11 @@
 package com.amit.crud.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.amit.crud.exception.ResourceNotFoundException;
@@ -20,17 +23,17 @@ import com.amit.crud.model.Employee;
 import com.amit.crud.repository.EmployeeRepository;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/employees")
 public class EmployeeController {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
-	@GetMapping("/employees")
-	public List<Employee> getAllEmployees() {
-		return employeeRepository.findAll();
-	}
+//	@GetMapping
+//	public List<Employee> getAllEmployees() {
+//		return employeeRepository.findAll();
+//	}
 
-	@GetMapping("/employees/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable(value = "id") Long employeeId)
 			throws ResourceNotFoundException {
 		Employee employee = employeeRepository.findById(employeeId)
@@ -38,12 +41,32 @@ public class EmployeeController {
 		return ResponseEntity.ok().body(employee);
 	}
 
-	@PostMapping("/employees")
+	@GetMapping
+	public ResponseEntity<List<Employee>> getEmployeesByName(@RequestParam(required = false) String firstName, @RequestParam(required = false) String lastName) {
+		if(Strings.isBlank(firstName) && Strings.isBlank(lastName)) {
+			return ResponseEntity.ok().body(employeeRepository.findAll());
+		} else if(Strings.isBlank(lastName)){
+			List<Employee> employeesByFirstName = employeeRepository.findByFirstName(firstName);
+			return ResponseEntity.ok().body(employeesByFirstName);
+		} else {
+			List<Employee> employeesByName = new ArrayList<Employee>();
+			employeesByName.add(employeeRepository.findByFirstNameAndLastName(firstName, lastName));
+			return ResponseEntity.ok().body(employeesByName);
+		}
+	}
+	
+	@GetMapping("/ages/{age}")
+	public ResponseEntity<List<Employee>> getTop10EmployeesByAge(@PathVariable Integer age){
+		List<Employee> employeesTop10ByAge = employeeRepository.findTop10ByAge(age);
+		return ResponseEntity.ok().body(employeesTop10ByAge);
+	}
+	
+	@PostMapping
 	public Employee createEmployee(@RequestBody Employee employee) {
 		return employeeRepository.save(employee);
 	}
 
-	@PutMapping("/employees/{id}")
+	@PutMapping("/{id}")
 	public ResponseEntity<Employee> updateEmployee(@PathVariable(value = "id") Long employeeId,
 			@RequestBody Employee employeeDetails) throws ResourceNotFoundException {
 		Employee employee = employeeRepository.findById(employeeId)
@@ -56,7 +79,7 @@ public class EmployeeController {
 		return ResponseEntity.ok(updatedEmployee);
 	}
 
-	@DeleteMapping("/employees/{id}")
+	@DeleteMapping("/{id}")
 	public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Long employeeId)
 			throws ResourceNotFoundException {
 		Employee employee = employeeRepository.findById(employeeId)
