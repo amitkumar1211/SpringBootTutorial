@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.amit.demo.model.Customer;
 import com.amit.demo.service.CustomerService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping("/customers")
 public class CustomerController {

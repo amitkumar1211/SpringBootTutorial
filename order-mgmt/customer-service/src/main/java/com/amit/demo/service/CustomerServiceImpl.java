@@ -35,7 +35,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public Customer findById(Long id) {
-		log.debug("Request to find the customer having id: "+id, id);
+		log.debug("Request to find the customer having id: {}", id);
 		return customerRepository.findById(id).get();
 	}
 
