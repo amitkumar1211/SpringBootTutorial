@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    password: sample
+    url: jdbc:derby:local;create=true
+    username: sample
+server:
+  port: 8089

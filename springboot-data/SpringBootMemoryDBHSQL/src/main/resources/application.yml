@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active:
+    - none
+server:
+  port: 8087
