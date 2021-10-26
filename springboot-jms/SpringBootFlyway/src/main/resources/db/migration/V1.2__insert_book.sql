@@ -1,0 +1,1 @@
+INSERT INTO `book`(`title`, `description`) VALUES('Spring in Action', 'learn spring');
