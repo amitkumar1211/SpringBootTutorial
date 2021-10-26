@@ -1,0 +1,20 @@
+2021-10-26 16:01:00,197 INFO [main] c.a.l.e.Springboot2LoggingApplication [StartupInfoLogger.java:55] Starting Springboot2LoggingApplication using Java 15.0.2 on DESKTOP-DJ4RK0R with PID 9296 (C:\work\trainings\Spring boot and Microservices\plan\springboot-advance\springboot-logback-example\target\classes started by amitk in C:\work\trainings\Spring boot and Microservices\plan\springboot-advance\springboot-logback-example)
+2021-10-26 16:01:00,200 DEBUG [main] c.a.l.e.Springboot2LoggingApplication [StartupInfoLogger.java:56] Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-10-26 16:01:00,201 INFO [main] c.a.l.e.Springboot2LoggingApplication [SpringApplication.java:675] No active profile set, falling back to default profiles: default
+2021-10-26 16:01:00,846 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8081 (http)
+2021-10-26 16:01:00,854 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8081"]
+2021-10-26 16:01:00,855 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2021-10-26 16:01:00,855 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-10-26 16:01:00,927 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2021-10-26 16:01:00,928 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:289] Root WebApplicationContext: initialization completed in 689 ms
+2021-10-26 16:01:01,051 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-26 16:01:01,193 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8081"]
+2021-10-26 16:01:01,216 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8081 (http) with context path ''
+2021-10-26 16:01:01,224 INFO [main] c.a.l.e.Springboot2LoggingApplication [StartupInfoLogger.java:61] Started Springboot2LoggingApplication in 1.311 seconds (JVM running for 2.029)
+2021-10-26 16:02:04,500 INFO [http-nio-8081-exec-2] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 16:02:04,500 INFO [http-nio-8081-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2021-10-26 16:02:04,501 INFO [http-nio-8081-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2021-10-26 16:02:04,519 DEBUG [http-nio-8081-exec-2] c.a.l.e.ArticleService [ArticleController.java:20] inside ArticleController.getArticles() method
+2021-10-26 16:02:04,520 DEBUG [http-nio-8081-exec-2] c.a.l.e.ArticleService [ArticleService.java:15] inside getArticles() method
+2021-10-26 16:03:07,033 INFO [RMI TCP Connection(11)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [SpringApplicationAdminMXBeanRegistrar.java:159] Application shutdown requested.
+2021-10-26 16:03:07,385 INFO [RMI TCP Connection(11)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
