@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: amitk
+Build-Jdk: 15.0.2
+Implementation-Title: spring-boot-activemq-consumer-example
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.amit
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: https://spring.io/projects/spring-boot/spring-boot-a
+ ctivemq-consumer-example
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,28 @@
+com/amit/springboot/profiles/ProfileScannerBean.java
+ com.amit.springboot.profiles.ProfileScannerBean
+com/amit/springboot/profiles/BaseConfiguration.java
+ com.amit.springboot.profiles.BaseConfiguration
+com/amit/springboot/profiles/HelloBean.java
+ com.amit.springboot.profiles.HelloBean
+com/amit/springboot/profiles/DefaultBean.java
+ com.amit.springboot.profiles.DefaultBean
+com/amit/springboot/profiles/ProfilesApplication.java
+ com.amit.springboot.profiles.ProfilesApplication
+com/amit/springboot/profiles/BazBean.java
+ com.amit.springboot.profiles.BazBean
+com/amit/springboot/profiles/FooBean.java
+ com.amit.springboot.profiles.FooBean
+com/amit/springboot/profiles/MockedOutputPort.java
+ com.amit.springboot.profiles.MockedOutputPort
+com/amit/springboot/profiles/WorkerConfiguration.java
+ com.amit.springboot.profiles.WorkerConfiguration
+com/amit/springboot/profiles/BarBean.java
+ com.amit.springboot.profiles.BarBean
+com/amit/springboot/profiles/RealOutputPort.java
+ com.amit.springboot.profiles.RealOutputPort
+com/amit/springboot/profiles/FooConfiguration.java
+ com.amit.springboot.profiles.FooConfiguration
+com/amit/springboot/profiles/OutputPort.java
+ com.amit.springboot.profiles.OutputPort
+com/amit/springboot/profiles/MasterConfiguration.java
+ com.amit.springboot.profiles.MasterConfiguration

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: amitk
+Build-Jdk: 15.0.2
+Implementation-Title: rest-jersey-example
+Implementation-Version: 2.1.2.RELEASE
+Implementation-Vendor-Id: org.springframework.boot
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+

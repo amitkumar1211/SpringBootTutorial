@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: amitk
+Build-Jdk: 15.0.2
+Implementation-Title: boot-jdbc-bulk-example
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.amit
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/boot-jdbc-bulk
+ -example/
+Created-By: Maven Integration for Eclipse
+

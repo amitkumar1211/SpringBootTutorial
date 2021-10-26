@@ -1,0 +1,4 @@
+com/amit/springboot/profiles/FooBarProfileTest.java
+ com.amit.springboot.profiles.FooBarProfileTest
+com/amit/springboot/profiles/FooProfileTest.java
+ com.amit.springboot.profiles.FooProfileTest

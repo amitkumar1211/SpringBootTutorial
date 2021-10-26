@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.amit.fileuploaddownload.property.FileStorageProperties",
+      "sourceType": "com.amit.fileuploaddownload.property.FileStorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.upload-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.amit.fileuploaddownload.property.FileStorageProperties"
+    }
+  ],
+  "hints": []
+}

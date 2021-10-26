@@ -1,0 +1,32 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.amit.externalizingconfproperties.DataSourceConfig",
+      "name": "jdbc",
+      "type": "com.amit.externalizingconfproperties.DataSourceConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.amit.externalizingconfproperties.DataSourceConfig",
+      "name": "jdbc.driver",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.amit.externalizingconfproperties.DataSourceConfig",
+      "name": "jdbc.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.amit.externalizingconfproperties.DataSourceConfig",
+      "name": "jdbc.url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.amit.externalizingconfproperties.DataSourceConfig",
+      "name": "jdbc.username",
+      "type": "java.lang.String"
+    }
+  ]
+}

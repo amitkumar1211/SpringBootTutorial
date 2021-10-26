@@ -1,0 +1,39 @@
+{
+  "groups": [{
+    "name": "myconfig",
+    "type": "com.amit.MyAppConfig",
+    "sourceType": "com.amit.MyAppConfig"
+  }],
+  "properties": [
+    {
+      "name": "myconfig.admin-email",
+      "type": "java.lang.String",
+      "sourceType": "com.amit.MyAppConfig"
+    },
+    {
+      "name": "myconfig.admin-first-name",
+      "type": "java.lang.String",
+      "sourceType": "com.amit.MyAppConfig"
+    },
+    {
+      "name": "myconfig.admin-last-name",
+      "type": "java.lang.String",
+      "sourceType": "com.amit.MyAppConfig"
+    },
+    {
+      "name": "myconfig.app-description",
+      "type": "java.lang.String",
+      "sourceType": "com.amit.MyAppConfig"
+    },
+    {
+      "name": "myconfig.app-name",
+      "type": "java.lang.String",
+      "sourceType": "com.amit.MyAppConfig"
+    },
+    {
+      "name": "myconfig.myapp-name",
+      "type": "java.lang.String",
+      "sourceType": "com.amit.MyAppConfig"
+    }
+  ]
+}
