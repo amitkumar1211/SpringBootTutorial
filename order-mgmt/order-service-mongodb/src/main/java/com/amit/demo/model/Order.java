@@ -36,6 +36,6 @@ public class Order {
 	
 	private BigDecimal total;
 	
-	private final List<Product> products;
+	private List<Product> products;
 
 }
