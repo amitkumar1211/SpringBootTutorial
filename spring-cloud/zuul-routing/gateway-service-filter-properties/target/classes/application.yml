@@ -1,0 +1,21 @@
+server:
+  port: 8085
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: employeeModule
+        uri: http://localhost:8071/
+        predicates:
+        - Path=/employee/**
+        filters:
+        - AddRequestHeader=first-request, first-request-header
+        - AddResponseHeader=first-response, first-response-header
+      - id: consumerModule
+        uri: http://localhost:8072/
+        predicates:
+        - Path=/consumer/**
+        filters:
+        - AddRequestHeader=second-request, second-request-header
+        - AddResponseHeader=second-response, second-response-header

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: second-microservice
+server:
+  port: 8089
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8761/eureka/
