@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: api-gateway  cloud:    gateway:      routes:      - id: customerService
+        uri: http://localhost:8071/
+        predicates:        - Path=/customers/**
+              - id: customerService
+        uri: http://localhost:8072/
+        predicates:
+        - Path=/api/v1/employees/**
+        
+      - id: orderService
+        uri: http://localhost:8073/
+        predicates:
+        - Path=/api/v1/orders/**
+        
+      - id: prouctService
+        uri: http://localhost:8074/
+        predicates:
+        - Path=/products/**          
+server:  port: 8095
